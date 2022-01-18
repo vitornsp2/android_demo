@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId "io.smooch.demoapp"
+        minSdkVersion 19
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+
+    // Add Smooch ui to use the SDK out of the box
+    //implementation project(":ui")
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'io.smooch:ui:9.0.2'
+
+    // Smooch core is included in ui and can be omitted
+    // Add it to your dependencies if you intend to build a custom UI
+    implementation 'io.smooch:core:9.0.2'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    api 'io.jsonwebtoken:jjwt-api:0.10.7'
+    api group: 'com.zendesk', name: 'support', version: '5.0.6'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.10.7'
+    runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.10.7') {
+        exclude group: 'org.json', module: 'json'
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

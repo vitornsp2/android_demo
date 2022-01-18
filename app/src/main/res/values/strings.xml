@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Next</string>
+
+    <string name="title_section1">Next</string>
+    <string name="title_section2">Show Minhas Conversas</string>
+    <string name="title_section3">Nova Conversa</string>
+    <string name="title_section4">Base de Conhecimento</string>
+    <string name="title_section5">Settings</string>
+    
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="Smooch_demo_welcome"></string>
+    <string name="Smooch_demo_show_conversation">Começar</string>
+    <string name="Smooch_demo_intro"></string>
+
+    <string name="Smooch_demo_integration_id">You can set your own integration id if you want to have a conversation with yourself.</string>
+</resources>
